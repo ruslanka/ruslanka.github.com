@@ -1,8 +1,6 @@
 ---
 layout: article
-category:
-  - history
-  - questions
+category: questions
 author: Ворожейкина Руслана
 title: Что такое Зороастризм?
 ---
