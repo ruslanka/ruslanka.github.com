@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>{{ post.title }} - RUslanka.RU</title>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <article class="hentry">
+      <header>
+        <h1 class="entry-title">{{ post.title }}</h1>
+        <time class="updated" datetime="{{ site.time }}" pubdate>
+          {{ post.date }}
+        </time>
+        <p class="byline author vcard">
+            <span class="fn">{{ post.author }}</span>
+        </p>
+      </header>
+
+      <div class="entry-content">
+        {{ content }}
+      </div>
+
+      <footer>
+        <div class="source-org vcard copyright">
+            Copyright 2011 <span class="org fn">http://ruslanka.ru</span>
+        </div>
+      </footer>
+    </article>
+  </body>
+</html>
+
