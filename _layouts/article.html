@@ -8,8 +8,8 @@
     <article class="hentry">
       <header>
         <h1 class="entry-title">{{ page.title }}</h1>
-        <time class="updated" datetime="{{ site.time.class.to_s }}" pubdate>
-          {{ page.date.class.to_s }}
+        <time class="updated" datetime="{{ Time.now(site.time).to_s }}" pubdate>
+          {{ page.date }}
         </time>
         <p class="byline author vcard">
             <span class="fn">{{ page.author }}</span>
