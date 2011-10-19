@@ -17,6 +17,11 @@
 <script src="/assets/javascripts/master.js"></script>
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<!-- Put this script tag to the <head> of your page -->
+<script type="text/javascript" src="http://userapi.com/js/api/openapi.js?34"></script>
+<script type="text/javascript">
+  VK.init({apiId: API_ID, onlyWidgets: true});
+</script>
 </head>
 <body>
 <div id="main" class="abs">
@@ -68,6 +73,12 @@
 <p><img class="alignnone size-full wp-image-133" src="http://rubycat.ru/wp-content/uploads/2011/03/object_ruby.jpg" alt="" width="512" height="341" /></p>
 <p>Класс Object образует множество функциональных возможностей в форме констант и методов. Они автоматом наследуются всеми остальными программами Ruby. Object представляет такие методы, как ==, eql?, class, inspect, object_id, to_s.</p>
 <p>На сегодня по классу Object в Ruby — всё.</p>
+
+<!-- Put this div tag to the place, where the Comments block will be -->
+<div id="vk_comments"></div>
+<script type="text/javascript">
+VK.Widgets.Comments("vk_comments", {limit: 10, width: "496", attach: "*"});
+</script>
 
 
 		</div>

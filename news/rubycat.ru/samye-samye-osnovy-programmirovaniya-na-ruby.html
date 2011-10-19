@@ -17,6 +17,11 @@
 <script src="/assets/javascripts/master.js"></script>
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<!-- Put this script tag to the <head> of your page -->
+<script type="text/javascript" src="http://userapi.com/js/api/openapi.js?34"></script>
+<script type="text/javascript">
+  VK.init({apiId: API_ID, onlyWidgets: true});
+</script>
 </head>
 <body>
 <div id="main" class="abs">
@@ -100,6 +105,12 @@ puts 3.0 &#8211; 4.0<br />
 puts 13.0 / 2.0</span></p>
 <p>С цифрами разобрались, надеюсь&#8230; Кстати, вы можете складывать строки (текст), попробуйте и посмотрите, что получиться.</p>
 <p>Это была я, <a href="http://rubycat.ru" target="_self">Рубиновая кошка</a>, пишите мне, комментите!</p>
+
+<!-- Put this div tag to the place, where the Comments block will be -->
+<div id="vk_comments"></div>
+<script type="text/javascript">
+VK.Widgets.Comments("vk_comments", {limit: 10, width: "496", attach: "*"});
+</script>
 
 
 		</div>
