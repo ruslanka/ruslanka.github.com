@@ -407,7 +407,7 @@ html .is_portrait #sidebar > #nav_arrow {
 .col1, .col2 {width:50%;}
 .col1 {float:left;}
 .col2 {float:right;}
-
+/*
 #premium, #premium2 {margin:10px 12px 0 -12px; padding:5px 0 20px 0; margin:0; padding:0}
 #premium LI,  #premium2 LI {float:left; width:100%; padding:2px 0 5px 0; clear:both; margin-bottom:5px}
 #premium P.link, #premium2 P.link {padding-left:12px}
@@ -423,14 +423,15 @@ html .is_portrait #sidebar > #nav_arrow {
 #premium.premiumlist LI {padding-left:12px}
 #premium.premiumlist P.link {padding-left:0}
 
-.premiumbookmarks {margin:0 0 0 -12px; padding:0 0 5px 0}
-.premiumbookmarks LI {list-style-type:none; padding:7px 10px; overflow:hidden}
-.premiumbookmarks .big {text-decoration:none; font-weight:bold; font-size:14px}
-.premiumbookmarks IMG {vertical-align:middle}
+.premium#bookmarks {margin:0 0 0 -12px; padding:0 0 5px 0}
+.premium#bookmarks LI {list-style-type:none; padding:7px 10px; overflow:hidden}
+.premium#bookmarks .big {text-decoration:none; font-weight:bold; font-size:14px}
+.premium#bookmarks IMG {vertical-align:middle}
 
 .premiumpromo {width:725px; margin:0 auto; font-size:16px; background:url(/images/premium4.png) no-repeat 50% 0; padding:100px 0 50px 0}
 .premiumpromo H1 {font-size:18px; color:#ff6699; margin:0}
 .promotop {background:url(/images/premium5.png) no-repeat 50% 100%; padding-bottom:50px}
 .pinkbutton {background-color:#fa2b69; color:#fff; font-size:16px; font-weight:bold; padding:5px 35px; text-decoration:none}
 .pinkbutton:hover {color:#fff}
+*/
 
