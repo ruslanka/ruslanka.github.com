@@ -402,14 +402,3 @@ html .is_portrait #sidebar > #nav_arrow {
 	height: 6px;
 }
 
-/* Bookmarks */
-.intro, .sorting, .listtags, .buttons, .createbundle, .listbundles, .pagenav, .bookmarks, .newmessbox, .contact, .blogbox, .profile, .settings, .addlink, .reg, .about {padding-left:12px; padding-right:12px;}
-.bookmarks ul {margin:10px 0 0; padding:0; width:100%; overflow:hidden;}
-.bookmarks li {list-style:none; color:#999; width:100%; margin-bottom:10px; padding:0 0 5px;}
-.bookmarks a.big {font-weight:bold; margin:0;}
-.bookmarks p {margin:0; padding-left:26px; //margin-left:3px;}
-.bookmarks p.link {padding:0; overflow:hidden; //width:94%; line-height:1.2;}
-.bookmarks p.link img {vertical-align:-2px;}
-.bookmarks .txt {margin:3px 0; //margin-left:3px;}
-.txt {color:#000; font-size:13px; line-height:1.2; margin:3px 0;}
-
