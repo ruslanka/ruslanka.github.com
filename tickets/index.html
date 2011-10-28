@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta content="text/html; charset=utf-8" http-equiv="content-type">
-    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta content="ie=edge" http-equiv="x-ua-compatible" />
     <title>
       Вопросы к экзаменам различных ВУЗов - RUslanka.ru
     </title>
-    <meta content="yes" name="apple-mobile-web-app-capable">
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <link href="/assets/stylesheets/master.css" rel="stylesheet">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+    <link href="/assets/stylesheets/master.css" rel="stylesheet" />
     <!--[if IE 8]>
-      <link href="/assets/stylesheets/ie8.css" rel="stylesheet">
+      <link href="/assets/stylesheets/ie8.css" rel="stylesheet" />
     <![endif]-->
     <!--[if !IE]>
       <script src="/assets/javascripts/iscroll.js"></script>
     <![endif]-->
     <script src="/assets/javascripts/jquery.js"></script>
     <script src="/assets/javascripts/master.js"></script>
-    <link href="/favicon.ico" rel="icon" type="image/x-icon">
-    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="/favicon.ico" rel="icon" type="image/x-icon" />
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
   </head>
   <body>
     <div class="abs" id="main">
@@ -62,35 +62,18 @@
       </div>
       <div class="abs" id="main_content">
         <div id="main_content_inner">
-          <h1>Вопросы к&#160;экзаменам различных ВУЗов</h1>
-          <h2><a href="http://www.mgpu.ru/">МГПУ</a></h2>
-          <h3>1 курс</h3>
-          <ul>
-          	<li>История Древнего мира (<a href="/tickets/mgpu/1-kurs/istoriya-drevnego-mira/voprosy-k-ekzamenu.html">Вопросы к&#160;экзамену</a>)</li>
-          	<li>История России (<a href="/tickets/mgpu/1-kurs/istoriya-rossii/voprosy-k-ekzamenu.html">Вопросы к&#160;экзамену</a>)</li>
-          	<li>Педагогика (<a href="/tickets/mgpu/1-kurs/pedagogika/voprosy-k-ekzamenu.html">Вопросы к&#160;экзамену</a>)</li>
-          	<li>Психология (<a href="/tickets/mgpu/1-kurs/psihologiya/voprosy-k-ekzamenu.html">Вопросы к&#160;экзамену</a>)</li>
-          	<li>Русский язык и&#160;культура речи (<a href="/tickets/mgpu/1-kurs/russkiy-yazyk-i-kultura-rechi/bilety-dlya-zacheta.html">Билеты для&#160;зачета</a>)</li>
-          </ul>
-          <h3>2 курс</h3>
-          <ul>
-          	<li>История России (<a href="/tickets/mgpu/2-kurs/istoriya-rossii/voprosy-k-ekzamenu.html">Вопросы к&#160;экзамену</a>)</li>
-          	<li>История Средних веков (<a href="/tickets/mgpu/2-kurs/istoriya-srednih-vekov/voprosy-k-ekzamenu.html">Вопросы к&#160;экзамену</a>, <a href="/tickets/mgpu/2-kurs/istoriya-srednih-vekov/temy-kursovyh-rabot.html">Темы курсовых работ</a>, <a href="/tickets/mgpu/2-kurs/istoriya-srednih-vekov/otvety-na-nekotorye-ekzamenatsionnnye-voprosy.html">Ответы на&#160;некоторые экзаменационнные вопросы</a>)</li>
-          	<li>Культурология (<a href="/tickets/mgpu/2-kurs/kulturologiya/programma-zanyatiy.html">Программа занятий</a>)</li>
-          </ul>
-          <h3>3 курс</h3>
-          <ul>
-          	<li>История Европы и&#160;Америки (<a href="/tickets/mgpu/3-kurs/istoriya-evropy-i-ameriki/voprosy-k-ekzamenu.html">Вопросы к&#160;экзамену</a>)</li>
-          	<li>История России (<a href="/tickets/mgpu/3-kurs/istoriya-rossii/voprosy-k-ekzamenu.html">Вопросы к&#160;экзамену</a>)</li>
-          </ul>
-          <h3>4 курс</h3>
-          <ul>
-          	<li>История Европы и&#160;Америки (<a href="/tickets/mgpu/4-kurs/istoriya-evropy-i-ameriki/voprosy-k-ekzamenu.html">Вопросы к&#160;экзамену</a>)</li>
-          </ul>
-          <h3>5 курс</h3>
-          <ul>
-          	<li>Теория и&#160;методика преподавания истории и&#160;обществознания (<a href="/tickets/mgpu/5-kurs/teoriya-i-metodika-prepodavaniya-istorii-i-obschestvoznaniya/ekzamenatsionnye-bilety.html">Экзаменационные билеты</a>)</li>
-          </ul>
+          <p>%h1= item[:title]<br />
+          %h2<br />
+            %a{ href=&#62; &#171;http://www.mgpu.ru/&#187;} МГПУ<br />
+          &#8211; items.select{ |itm| itm[:university] }.inject( {} ){ |result,itm|<br />
+          &#8211;  result.update( { itm[:year] =&#62; [itm] } ){ |k,o,n| o&#160;+ n&#160;}<br />
+          &#8211; }.sort_by{ |year,itms| year }.each{ |year, itms|<br />
+          %h3= year<br />
+          %ul<br />
+            &#8211; itms.inject( {} ){ |res,itm| res.update( itm[:discipline] =&#62; [itm] ){ |k,o,n| o&#160;+ n&#160;} }.sort_by{ |disc,its| disc }.each{ |disc, its|<br />
+            %li #{disc} (#{its.map{ |it| %Q&#8217;<a href="%s">%s</a>&#8217; % [it.path, it[:title]] }.join(&#34;, &#34;) })<br />
+            -}<br />
+          -}</p>
         </div>
       </div>
       <div class="abs footer_lower chrome_light">
@@ -107,12 +90,12 @@
       <span id="nav_arrow"></span>
       <div class="abs header_upper chrome_light">
         <a href="/" title="Главная">
-          <img alt="RUslanka.RU" src="/assets/images/logo.png">
+          <img alt="RUslanka.RU" src="/assets/images/logo.png" />
         </a>
       </div>
       <form action="http://yandex.ru/sitesearch" class="abs header_lower chrome_dark" target="_blank">
-        <input name="searchid" type="hidden" value="1786024">
-        <input id="q" name="text" placeholder="Поиск по сайту..." type="search">
+        <input name="searchid" type="hidden" value="1786024" />
+        <input id="q" name="text" placeholder="Поиск по сайту..." type="search" />
       </form>
       <div class="abs" id="sidebar_content">
         <div id="sidebar_content_inner">
@@ -1719,7 +1702,7 @@
     </div>
     <!-- Yandex.Metrika counter -->
     <div style="display:none;">
-      <script>
+      <script type="text/javascript">
         //<![CDATA[
           (function(w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter10429504 = new Ya.Metrika({id:10429504, enableAll: true}); } catch(e) { } }); })(window, "yandex_metrika_callbacks");    %script{:defer => "defer", :src => "//mc.yandex.ru/metrika/watch.js", :type => "text/javascript"}
         //]]>
@@ -1727,7 +1710,7 @@
     </div>
     <noscript>
       <div>
-        <img alt="" src="//mc.yandex.ru/watch/10429504" style="position:absolute; left:-9999px;">
+        <img alt="" src="//mc.yandex.ru/watch/10429504" style="position:absolute; left:-9999px;" />
       </div>
     </noscript>
     <!-- /Yandex.Metrika counter -->
