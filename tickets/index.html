@@ -62,18 +62,37 @@
       </div>
       <div class="abs" id="main_content">
         <div id="main_content_inner">
-          <p>%h1= item[:title]<br />
-          %h2<br />
-            %a{ href=&#62; &#171;http://www.mgpu.ru/&#187;} МГПУ<br />
-          &#8211; items.select{ |itm| itm[:university] }.inject( {} ){ |result,itm|<br />
-          &#8211;  result.update( { itm[:year] =&#62; [itm] } ){ |k,o,n| o&#160;+ n&#160;}<br />
-          &#8211; }.sort_by{ |year,itms| year }.each{ |year, itms|<br />
-          %h3= year<br />
-          %ul<br />
-            &#8211; itms.inject( {} ){ |res,itm| res.update( itm[:discipline] =&#62; [itm] ){ |k,o,n| o&#160;+ n&#160;} }.sort_by{ |disc,its| disc }.each{ |disc, its|<br />
-            %li #{disc} (#{its.map{ |it| %Q&#8217;<a href="%s">%s</a>&#8217; % [it.path, it[:title]] }.join(&#34;, &#34;) })<br />
-            -}<br />
-          -}</p>
+          <h1>Вопросы к экзаменам различных ВУЗов</h1>
+          <h2>
+            <a href='http://www.mgpu.ru/'>МГПУ</a>
+          </h2>
+          <h3>1 курс</h3>
+          <ul>
+            <li>История Древнего мира (<a href="/tickets/mgpu/1-kurs/istoriya-drevnego-mira/voprosy-k-ekzamenu.html">Вопросы к экзамену</a>)</li>
+            <li>История России (<a href="/tickets/mgpu/1-kurs/istoriya-rossii/voprosy-k-ekzamenu.html">Вопросы к экзамену</a>)</li>
+            <li>Педагогика (<a href="/tickets/mgpu/1-kurs/pedagogika/voprosy-k-ekzamenu.html">Вопросы к экзамену</a>)</li>
+            <li>Психология (<a href="/tickets/mgpu/1-kurs/psihologiya/voprosy-k-ekzamenu.html">Вопросы к экзамену</a>)</li>
+            <li>Русский язык и культура речи (<a href="/tickets/mgpu/1-kurs/russkiy-yazyk-i-kultura-rechi/bilety-dlya-zacheta.html">Билеты для зачета</a>)</li>
+          </ul>
+          <h3>2 курс</h3>
+          <ul>
+            <li>История России (<a href="/tickets/mgpu/2-kurs/istoriya-rossii/voprosy-k-ekzamenu.html">Вопросы к экзамену</a>)</li>
+            <li>История Средних веков (<a href="/tickets/mgpu/2-kurs/istoriya-srednih-vekov/voprosy-k-ekzamenu.html">Вопросы к экзамену</a>, <a href="/tickets/mgpu/2-kurs/istoriya-srednih-vekov/temy-kursovyh-rabot.html">Темы курсовых работ</a>, <a href="/tickets/mgpu/2-kurs/istoriya-srednih-vekov/otvety-na-nekotorye-ekzamenatsionnnye-voprosy.html">Ответы на некоторые экзаменационнные вопросы</a>)</li>
+            <li>Культурология (<a href="/tickets/mgpu/2-kurs/kulturologiya/programma-zanyatiy.html">Программа занятий</a>)</li>
+          </ul>
+          <h3>3 курс</h3>
+          <ul>
+            <li>История Европы и Америки (<a href="/tickets/mgpu/3-kurs/istoriya-evropy-i-ameriki/voprosy-k-ekzamenu.html">Вопросы к экзамену</a>)</li>
+            <li>История России (<a href="/tickets/mgpu/3-kurs/istoriya-rossii/voprosy-k-ekzamenu.html">Вопросы к экзамену</a>)</li>
+          </ul>
+          <h3>4 курс</h3>
+          <ul>
+            <li>История Европы и Америки (<a href="/tickets/mgpu/4-kurs/istoriya-evropy-i-ameriki/voprosy-k-ekzamenu.html">Вопросы к экзамену</a>)</li>
+          </ul>
+          <h3>5 курс</h3>
+          <ul>
+            <li>Теория и методика преподавания истории и обществознания (<a href="/tickets/mgpu/5-kurs/teoriya-i-metodika-prepodavaniya-istorii-i-obschestvoznaniya/ekzamenatsionnye-bilety.html">Экзаменационные билеты</a>)</li>
+          </ul>
         </div>
       </div>
       <div class="abs footer_lower chrome_light">
