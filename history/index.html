@@ -62,28 +62,17 @@
       </div>
       <div class="abs" id="main_content">
         <div id="main_content_inner">
-          <h1>Все исторические статьи</h1>
-          <h2>Античность</h2>
-          <ul>
-          	<li><a href="/history/antichnost/kapischa-drevnih-slavyan.html">Капища древних славян</a></li>
-          	<li><a href="/history/antichnost/krovnaya-mest-u-drevnih-germantsev.html">Кровная месть у&#160;древних германцев</a></li>
-          	<li><a href="/history/antichnost/sostav-karfagenskoy-armii-vo-vremya-vtoroy-punicheskoy-voyny.html">Состав карфагенской армии во&#160;время Второй Пунической войны</a></li>
-          	<li><a href="/history/antichnost/chto-takoe-zoroastrizm.html">Что такое Зороастризм?</a></li>
-          </ul>
-          <h2>Средние века</h2>
-          <ul>
-          	<li><a href="/history/srednie-veka/politika-alekseya-mihaylovicha-romanova.html">Политика Алексея Михайловича Романова</a></li>
-          	<li><a href="/history/srednie-veka/chetvertyy-krestovyy-pohod.html">Четвертый крестовый поход</a></li>
-          </ul>
-          <h2>Новое время</h2>
-          <ul>
-          	<li><a href="/history/novoe-vremya/prosvetitelnaya-deyatelnost-intelligentsii-sredi-rabochih.html">Просветительная деятельность интеллигенции среди рабочих</a></li>
-          </ul>
-          <h2>Новейшее время</h2>
-          <ul>
-          	<li><a href="/history/noveyshee-vremya/ctroitelstvo-sotsializma-v-epohu-ulbrihta.html">Cтроительство социализма в&#160;эпоху Ульбрихта</a></li>
-          	<li><a href="/history/noveyshee-vremya/o-chem-pisali-v-«pravde».html">О чем&#160;писали в&#160;«Правде»?</a></li>
-          </ul>
+          <p>%h1= item[:title]<br />
+          &#8211; timeline = ["Античность","Средние века", &#171;Возрождение&#187;, &#171;Новое время&#187;,"Новейшее время"]<br />
+          &#8211; items.select{ |itm| itm[:age] }.inject( {} ){ |result,itm|<br />
+          &#8211;  result.update( { itm[:age] =&#62; [itm] } ){ |k,o,n| o&#160;+ n&#160;}<br />
+          &#8211; }.sort_by{ |age, itms| timeline.index(age) }.map{ |age, itms|<br />
+          %h2= age<br />
+          %ul<br />
+            &#8211; itms.sort_by{ |itm| itm[:title] }.each{ |itm|<br />
+            %li= link_to(itm[:title], itm)<br />
+            &#8211; }<br />
+          &#8211; }</p>
         </div>
       </div>
       <div class="abs footer_lower chrome_light">
