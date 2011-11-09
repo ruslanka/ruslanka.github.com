@@ -1,4 +1,5 @@
 User-agent: *
 Disallow: /asserts
+Disallow: /search
 Sitemap: http://ruslanka.github.com/sitemap.xml
 
