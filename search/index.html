@@ -62,7 +62,14 @@
       </div>
       <div class="abs" id="main_content">
         <div id="main_content_inner">
-          <h1>Поиск по сайту</h1>
+          <div id='yandexform' onclick="return {type: 3, logo: 'rb', arrow: true, webopt: false, websearch: false, bg: '#FFCC00', fg: '#000000', fontsize: 12, suggest: true, site_suggest: true, encoding: '', language: 'ru'}">
+            <form action='/search/' method='get'>
+              <input name='searchid' type='hidden' value='1786024' />
+              <input name='text' />
+              <input type='submit' value='Найти' />
+            </form>
+            <script charset='utf-8' src='http://site.yandex.net/load/form/1/form.js'></script>
+          </div>
           <div id='yandex-results-outer' onclick="return {encoding: '', language: 'ru'}"></div>
           <script charset='utf-8' src='http://site.yandex.net/load/site.js'></script>
         </div>
@@ -120,6 +127,10 @@
                         </li><li>
                           <a href="/zametki/2011/11/05/krymskaya-voyna.html">
                             Крымская война
+                          </a>
+                        </li><li>
+                          <a href="/zametki/2011/11/01/poet-f-n-slepushkin.html">
+                            Поэт Ф.Н. Слепушкин
                           </a>
                         </li></ul>
                     </li>
